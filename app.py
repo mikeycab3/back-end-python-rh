@@ -30,7 +30,7 @@ def create_app():
 
     @app.get("/")
     def inicio():
-        return "API de Recursos Humanos (Flask)"
+        return "API de Recursos Humanos (Flask)-Desarrollador Miguel Cabrera Muñoz"
 
     return app
 
