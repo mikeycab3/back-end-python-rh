@@ -12,7 +12,7 @@ def create_app():
 
     # Ajusta usuario/contraseña/host según tu entorno
     app.config["SQLALCHEMY_DATABASE_URI"] = (
-        "mysql+pymysql://root@localhost/recursos_humanos_db?charset=utf8mb4"
+        "mysql+pymysql://root:kUCOQLtJJquPQBCypVFobHwarXdtNbGC@switchback.proxy.rlwy.net:49962/railway?charset=utf8mb4"
     )
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     app.config["JSON_AS_ASCII"] = False
@@ -37,5 +37,5 @@ def create_app():
 
 if __name__ == "__main__":
     create_app().run(host='0.0.0.0', debug=True)
-    #create_app().run(debug=True)
+    create_app().run(debug=True)
 
