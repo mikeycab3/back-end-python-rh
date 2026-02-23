@@ -8,7 +8,7 @@ class EmpleadoSchema(ma.SQLAlchemySchema):
         load_instance = True
         sqla_session = db.session
 
-    #idEmpleado = ma.auto_field(dump_only=True)
+    idEmpleado = ma.auto_field(dump_only=True)
     nombre = ma.auto_field(required=True, validate=validate.Length(min=1, max=100))
     departamento = ma.auto_field(required=True, validate=validate.Length(min=1, max=100))
     # Guardamos DECIMAL en BD, pero exponemos float en JSON para facilitar consumo
