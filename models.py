@@ -1,14 +1,19 @@
-import uuid
+import random
 from extensions import db
 
-
+def generar_id():
+    while True:
+        nuevo_id = random.randint(100000, 999999)
+        if not Empleado.query.get(nuevo_id):
+            return nuevo_id
+        
 class Empleado(db.Model):
     __tablename__ = 'empleados'
     
     idEmpleado = db.Column(
-        db.String(36),
+        db.Integer,
         primary_key=True,
-        default=lambda: str(uuid.uuid4())
+        default=generar_id   # 👈 aquí se genera automático
     )
 
     #idEmpleado = db.Column(db.Integer, primary_key=True)
