@@ -1,9 +1,17 @@
+import uuid
 from extensions import db
+
 
 class Empleado(db.Model):
     __tablename__ = 'empleados'
+    
+    idEmpleado = db.Column(
+        db.String(36),
+        primary_key=True,
+        default=lambda: str(uuid.uuid4())
+    )
 
-    idEmpleado = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    #idEmpleado = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(100), nullable=False)
     departamento = db.Column(db.String(100), nullable=False)
     sueldo = db.Column(db.Numeric(10, 2), nullable=False)

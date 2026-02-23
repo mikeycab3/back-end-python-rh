@@ -12,7 +12,7 @@ def create_app():
 
     # Ajusta usuario/contraseña/host según tu entorno
     app.config["SQLALCHEMY_DATABASE_URI"] = (
-        "mysql+pymysql://root:kUCOQLtJJquPQBCypVFobHwarXdtNbGC@switchback.proxy.rlwy.net:49962/railway?charset=utf8mb4"
+        "mysql+pymysql://root:iqZmliTiQyleGerFYoxXtlBXMyRVfFSc@centerbeam.proxy.rlwy.net:14794/railway?charset=utf8mb4"
     )
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     app.config["JSON_AS_ASCII"] = False
@@ -30,7 +30,7 @@ def create_app():
 
     @app.get("/")
     def inicio():
-        return "API de Recursos Humanos (Flask)-Desarrollador Miguel Cabrera Muñoz"
+        return "API de Recursos Humanos (Flask), Miguel Cabrera Muñoz"
 
     return app
 
